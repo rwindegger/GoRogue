@@ -5,9 +5,6 @@ using System.Collections.Generic;
 using Troschuetz.Random;
 using DrawingRectangle = System.Drawing.Rectangle;
 using DrawingRectangleF = System.Drawing.RectangleF;
-#if ALLCONVERSIONS
-using XnaRectangle = Microsoft.Xna.Framework.Rectangle;
-#endif
 
 namespace GoRogue
 {
@@ -800,65 +797,6 @@ namespace GoRogue
 		/// <returns>A new rectangle, whose y-position has been moved by the given delta-y value.</returns>
 		public Rectangle TranslateY(int dy)
 			=> new Rectangle(X, Y + dy, Width, Height);
-
-		#if ALLCONVERSIONS
-		#region MonoGame Conversions
-		/// <summary>
-		/// Implicitly converts a GoRogue Rectangle to an equivalent MonoGame Rectangle.
-		/// </summary>
-		/// <param name="rect" />
-		/// <returns />
-		public static implicit operator XnaRectangle(Rectangle rect) => new XnaRectangle(rect.X, rect.Y, rect.Width, rect.Height);
-		/// <summary>
-		/// Implicitly converts a MonoGame Rectangle to an equivalent GoRogue Rectangle.
-		/// </summary>
-		/// <param name="rect" />
-		/// <returns />
-		public static implicit operator Rectangle(XnaRectangle rect) => new Rectangle(rect.X, rect.Y, rect.Width, rect.Height);
-
-		/// <summary>
-		/// True if the two rectangles represent the same area.
-		/// </summary>
-		/// <param name="r1"></param>
-		/// <param name="r2"></param>
-		/// <returns>True if the two rectangles are equal, false if not.</returns>
-		public static bool operator ==(Rectangle r1, XnaRectangle r2)
-		{
-			return r1.X == r2.X && r1.Y == r2.Y && r1.Width == r2.Width && r1.Height == r2.Height;
-		}
-
-		/// <summary>
-		/// True if any of the rectangles' x/y/width/height values are not equal.
-		/// </summary>
-		/// <param name="r1"></param>
-		/// <param name="r2"></param>
-		/// <returns>
-		/// True if any of the x/y/width/height values are not equal, false if they are all equal.
-		/// </returns>
-		public static bool operator !=(Rectangle r1, XnaRectangle r2) => !(r1 == r2);
-
-		/// <summary>
-		/// True if the two rectangles represent the same area.
-		/// </summary>
-		/// <param name="r1"></param>
-		/// <param name="r2"></param>
-		/// <returns>True if the two rectangles are equal, false if not.</returns>
-		public static bool operator ==(XnaRectangle r1, Rectangle r2)
-		{
-			return r1.X == r2.X && r1.Y == r2.Y && r1.Width == r2.Width && r1.Height == r2.Height;
-		}
-
-		/// <summary>
-		/// True if any of the rectangles' x/y/width/height values are not equal.
-		/// </summary>
-		/// <param name="r1"></param>
-		/// <param name="r2"></param>
-		/// <returns>
-		/// True if any of the x/y/width/height values are not equal, false if they are all equal.
-		/// </returns>
-		public static bool operator !=(XnaRectangle r1, Rectangle r2) => !(r1 == r2);
-		#endregion
-		#endif
 
 		#region System Drawing Conversions
 		/// <summary>

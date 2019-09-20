@@ -17,7 +17,7 @@ namespace GoRogue_UnitTests
 
 	class UnorderedComponent
 	{
-		public int Value;
+		public int Value = 0;
 	}
 
 	[TestClass]

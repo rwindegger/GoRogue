@@ -80,7 +80,7 @@ namespace GoRogue_UnitTests
 			using (var stream = new FileStream(name, FileMode.Create, FileAccess.Write))
 				formatter.Serialize(stream, typeToSerialize);
 
-			T reSerialized = default;
+			T reSerialized = default(T);
 			using (var stream = new FileStream(name, FileMode.Open, FileAccess.Read))
 				reSerialized = (T)formatter.Deserialize(stream);
 

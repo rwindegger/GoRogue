@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using DrawingPoint = System.Drawing.Point;
-#if ALLCONVERSIONS
-using MonoPoint = Microsoft.Xna.Framework.Point;
-#endif
 
 namespace GoRogue
 {
@@ -394,94 +391,6 @@ namespace GoRogue
 		/// <param name="other">Coordinate to compare.</param>
 		/// <returns>True if the two coordinates are equal, false if not.</returns>
 		public bool Equals(Coord other) => X == other.X && Y == other.Y;
-		
-		#if ALLCONVERSIONS
-		#region MonoGame Compatibility
-		/// <summary>
-		/// Implicitly converts a Coord to an equivalent MonoGame point.
-		/// </summary>
-		/// <param name="c" />
-		/// <returns />
-		public static implicit operator MonoPoint(Coord c) => new MonoPoint(c.X, c.Y);
-		/// <summary>
-		/// Implicitly converts a MonoGame Point to an equivalent Coord.
-		/// </summary>
-		/// <param name="p" />
-		/// <returns />
-		public static implicit operator Coord(MonoPoint p) => new Coord(p.X, p.Y);
-		/// <summary>
-		/// Adds the x and y values of a Coord to a MonoGame Point.
-		/// </summary>
-		/// <param name="p" />
-		/// <param name="c" />
-		/// <returns>A MonoGame Point (p.X + c.X, p.Y + c.Y).</returns>
-		public static MonoPoint operator +(MonoPoint p, Coord c) => new MonoPoint(p.X + c.X, p.Y + c.Y);
-		/// <summary>
-		/// Adds the x and y values of a MonoGame Point to a Coord.
-		/// </summary>
-		/// <param name="c" />
-		/// <param name="p" />
-		/// <returns>A Coord (c.X + p.X, c.Y + p.Y).</returns>
-		public static Coord operator +(Coord c, MonoPoint p) => new Coord(c.X + p.X, c.Y + p.Y);
-		
-		/// <summary>
-		/// Subtracts the x and y values of a Coord from a MonoGame Point.
-		/// </summary>
-		/// <param name="p" />
-		/// <param name="c" />
-		/// <returns>A MonoGame Point (p.X - c.X, p.Y - c.Y).</returns>
-		public static MonoPoint operator -(MonoPoint p, Coord c) => new MonoPoint(p.X - c.X, p.Y - c.Y);
-		/// <summary>
-		/// Subtracts the x and y values of a MonoGame Point from a Coord.
-		/// </summary>
-		/// <param name="c" />
-		/// <param name="p" />
-		/// <returns>A Coord (c.X - p.X, c.Y - p.Y).</returns>
-		public static Coord operator -(Coord c, MonoPoint p) => new Coord(c.X - p.X, c.Y - p.Y);
-
-		/// <summary>
-		/// True if the two point's X and Y values are equal.
-		/// </summary>
-		/// <param name="c1"></param>
-		/// <param name="p2"></param>
-		/// <returns>True if the two coordinates are equal, false if not.</returns>
-		public static bool operator ==(Coord c1, MonoPoint p2)
-		{
-			return c1.X == p2.X && c1.Y == p2.Y;
-		}
-
-		/// <summary>
-		/// True if either the x-values or y-values are not equal.
-		/// </summary>
-		/// <param name="c1"></param>
-		/// <param name="p2"></param>
-		/// <returns>
-		/// True if either the x-values or y-values are not equal, false if they are both equal.
-		/// </returns>
-		public static bool operator !=(Coord c1, MonoPoint p2) => !(c1 == p2);
-
-		/// <summary>
-		/// True if the two point's X and Y values are equal.
-		/// </summary>
-		/// <param name="p1"></param>
-		/// <param name="c2"></param>
-		/// <returns>True if the two coordinates are equal, false if not.</returns>
-		public static bool operator ==(MonoPoint p1, Coord c2)
-		{
-			return p1.X == c2.X && p1.Y == c2.Y;
-		}
-
-		/// <summary>
-		/// True if either the x-values or y-values are not equal.
-		/// </summary>
-		/// <param name="p1"></param>
-		/// <param name="c2"></param>
-		/// <returns>
-		/// True if either the x-values or y-values are not equal, false if they are both equal.
-		/// </returns>
-		public static bool operator !=(MonoPoint p1, Coord c2) => !(p1 == c2);
-		#endregion
-		#endif
 
 		#region System.Drawing Compatibility
 		/// <summary>

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoRogue", "GoRogue\GoRogue.csproj", "{EB951D27-AE60-4991-B63A-2DF34F0CB3E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoRogue-PerformanceTests", "GoRogue-PerformanceTests\GoRogue-PerformanceTests.csproj", "{5D1395AA-98BC-43A3-98A9-56D20952CB64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoRogue.Tests", "GoRogue.Tests\GoRogue.Tests.csproj", "{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoRogue-UnitTests", "GoRogue-UnitTests\GoRogue-UnitTests.csproj", "{D421D454-9249-48CF-9F19-D17690615019}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoRogue.PerformanceTests", "GoRogue.PerformanceTests\GoRogue.PerformanceTests.csproj", "{26081490-21C7-435C-88EE-85DBDC7334CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,20 +25,22 @@ Global
 		{EB951D27-AE60-4991-B63A-2DF34F0CB3E0}.Release Minimal Dependencies|Any CPU.Build.0 = Release Minimal Dependencies|Any CPU
 		{EB951D27-AE60-4991-B63A-2DF34F0CB3E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB951D27-AE60-4991-B63A-2DF34F0CB3E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Debug Minimal Dependencies|Any CPU.ActiveCfg = Debug Minimal Dependencies|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Debug Minimal Dependencies|Any CPU.Build.0 = Debug Minimal Dependencies|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Release Minimal Dependencies|Any CPU.ActiveCfg = Release Minimal Dependencies|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Release Minimal Dependencies|Any CPU.Build.0 = Release Minimal Dependencies|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D1395AA-98BC-43A3-98A9-56D20952CB64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D421D454-9249-48CF-9F19-D17690615019}.Debug Minimal Dependencies|Any CPU.ActiveCfg = Debug Minimal Dependencies|Any CPU
-		{D421D454-9249-48CF-9F19-D17690615019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D421D454-9249-48CF-9F19-D17690615019}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D421D454-9249-48CF-9F19-D17690615019}.Release Minimal Dependencies|Any CPU.ActiveCfg = Release Minimal Dependencies|Any CPU
-		{D421D454-9249-48CF-9F19-D17690615019}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D421D454-9249-48CF-9F19-D17690615019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Debug Minimal Dependencies|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Debug Minimal Dependencies|Any CPU.Build.0 = Debug|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Release Minimal Dependencies|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Release Minimal Dependencies|Any CPU.Build.0 = Release|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5FDC75-ABCE-4383-8C10-CBC9595F6808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Debug Minimal Dependencies|Any CPU.ActiveCfg = Debug|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Debug Minimal Dependencies|Any CPU.Build.0 = Debug|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Release Minimal Dependencies|Any CPU.ActiveCfg = Release|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Release Minimal Dependencies|Any CPU.Build.0 = Release|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26081490-21C7-435C-88EE-85DBDC7334CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

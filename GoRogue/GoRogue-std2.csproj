@@ -36,12 +36,6 @@
     <DocumentationFile>bin\$(Configuration)\netstandard2.0\GoRogue-std2.xml</DocumentationFile>
   </PropertyGroup>
   
-  <!-- When packing, copy the nuget files to the nuget output directory -->
-  <Target Name="CopyPackage" Condition="'$(Configuration)'=='Debug' Or '$(Configuration)'=='Release'" AfterTargets="Pack">
-    <Copy SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(OutputPath)..\..\..\..\nuget" />
-    <Copy SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).snupkg" DestinationFolder="$(OutputPath)..\..\..\..\nuget" />
-  </Target>
-  
   <!-- Pack a read-me with the nuget package, so it displays when installed -->
   <ItemGroup>
     <None Include="readme.txt" Pack="true" PackagePath="." />

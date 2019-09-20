@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoRogue\GoRogue.csproj" />
+    <ProjectReference Include="..\GoRogue\GoRogue-std2.csproj" />
   </ItemGroup>
 
 </Project>
